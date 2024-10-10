@@ -99,11 +99,11 @@ int main(int argc, char * const *argv) {
     }
   }
 
-
   // Now read lines from stdin until EOF.
   char *line = NULL;
   ssize_t line_len;
   size_t buf_len = 0;
+  printf("Write a number:\n");
   while ((line_len = getline(&line, &buf_len, stdin)) != -1) {
     job_queue_push(&jq, (void*)strdup(line));
   }
