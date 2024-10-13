@@ -39,7 +39,7 @@ int fauxgrep_file(char const *needle, char const *path) {
 
   while (getline(&line, &linelen, f) != -1) {
     if (strstr(line, needle) != NULL) {
-      printf("%s:%d: %s \n", path, lineno, line);
+      printf("%s:%d: %s", path, lineno, line);
     }
 
     lineno++;
