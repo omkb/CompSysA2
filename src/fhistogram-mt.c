@@ -15,6 +15,8 @@
 #include "job_queue.h"
 
 pthread_mutex_t stdout_mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t histogram_mutex = PTHREAD_MUTEX_INITIALIZER;
+
 
 // err.h contains various nonstandard BSD extensions, but they are
 // very handy.
@@ -26,7 +28,6 @@ int global_histogram[8] = { 0 };
 
 int fhistogram(char const *path) {
   FILE *f = fopen(path, "r");
-
   int local_histogram[8] = { 0 };
 
   if (f == NULL) {
@@ -36,24 +37,29 @@ int fhistogram(char const *path) {
   }
 
   int i = 0;
-
   char c;
   while (fread(&c, sizeof(c), 1, f) == 1) {
     i++;
     update_histogram(local_histogram, c);
+        
     if ((i % 100000) == 0) {
+      pthread_mutex_lock(&histogram_mutex);
       merge_histogram(local_histogram, global_histogram);
       print_histogram(global_histogram);
+      pthread_mutex_unlock(&histogram_mutex);
     }
   }
 
   fclose(f);
 
+  pthread_mutex_lock(&histogram_mutex);
   merge_histogram(local_histogram, global_histogram);
   print_histogram(global_histogram);
+  pthread_mutex_unlock(&histogram_mutex);
 
   return 0;
 }
+
 
 void *worker(void *arg) {
   struct job_queue *jq = arg;
