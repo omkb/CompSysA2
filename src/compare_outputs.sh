@@ -1,13 +1,31 @@
 #!/bin/bash
 
-needle=$1
-path=$2
+SMALL_FILES_DIR="small_files"
+LARGE_FILES_DIR="large_files"
 
-./fauxgrep "$needle" "$path" > tests/output_fauxgrep.txt
-./fauxgrep-mt "$needle" "$path" > tests/output_fauxgrep_mt.txt
+PROGRAMS=("fhistogram" "fhistogram-mt" "fauxgrep" "fauxgrep-mt")
 
-if diff tests/output_fauxgrep.txt tests/output_fauxgrep_mt.txt > /dev/null; then
-    echo "Outputs are identical."
-else
-    echo "Outputs differ."
-fi
+run_benchmark() {
+  local program=$1
+  local args=$2
+  local files=$3
+  local threads=$4
+
+  if [ -z "$threads" ]; then
+    echo "Running $program on $files"
+    /usr/bin/time -p ./$program $args $files/*
+  else
+    echo "Running $program with $threads threads on $files"
+    /usr/bin/time -p ./$program -n $threads $args $files/*
+  fi
+}
+
+for n in 1 2 4 8; do
+  run_benchmark "fhistogram-mt" "" "$SMALL_FILES_DIR" $n
+  run_benchmark "fhistogram-mt" "" "$LARGE_FILES_DIR" $n
+done
+
+for n in 1 2 4 8; do
+  run_benchmark "fauxgrep-mt" "needle" "$SMALL_FILES_DIR" $n
+  run_benchmark "fauxgrep-mt" "needle" "$LARGE_FILES_DIR" $n
+done
