@@ -22,6 +22,54 @@ pthread_mutex_t stdout_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 #include "histogram.h"
 
+int global_histogram[8] = { 0 };
+
+int fhistogram(char const *path) {
+  FILE *f = fopen(path, "r");
+
+  int local_histogram[8] = { 0 };
+
+  if (f == NULL) {
+    fflush(stdout);
+    warn("failed to open %s", path);
+    return -1;
+  }
+
+  int i = 0;
+
+  char c;
+  while (fread(&c, sizeof(c), 1, f) == 1) {
+    i++;
+    update_histogram(local_histogram, c);
+    if ((i % 100000) == 0) {
+      merge_histogram(local_histogram, global_histogram);
+      print_histogram(global_histogram);
+    }
+  }
+
+  fclose(f);
+
+  merge_histogram(local_histogram, global_histogram);
+  print_histogram(global_histogram);
+
+  return 0;
+}
+
+void *worker(void *arg) {
+  struct job_queue *jq = arg;
+
+  while(1){
+    char *path;
+    if(job_queue_pop(jq, (void**)&path) == 0){
+      fhistogram(path);
+      free(path);
+    } else {
+      break;
+    }
+  }
+  return NULL;
+}
+
 int main(int argc, char * const *argv) {
   if (argc < 2) {
     err(1, "usage: paths...");
@@ -49,7 +97,17 @@ int main(int argc, char * const *argv) {
     paths = &argv[1];
   }
 
-  assert(0); // Initialise the job queue and some worker threads here.
+   // Create job queue
+  struct job_queue jq;
+  job_queue_init(&jq, 64);
+
+  // Start up the worker threads
+  pthread_t *threads = calloc(num_threads, sizeof(pthread_t));
+  for (int i = 0; i < num_threads; i++) {
+    if (pthread_create(&threads[i], NULL, &worker, &jq) != 0) {
+      err(1, "pthread_create() failed");
+    }
+  }
 
   // FTS_LOGICAL = follow symbolic links
   // FTS_NOCHDIR = do not change the working directory of the process
@@ -66,11 +124,20 @@ int main(int argc, char * const *argv) {
 
   FTSENT *p;
   while ((p = fts_read(ftsp)) != NULL) {
+    char *file_path = NULL;
     switch (p->fts_info) {
     case FTS_D:
       break;
     case FTS_F:
-      assert(0); // Process the file p->fts_path, somehow.
+      // Duplicate the file path to push onto the job queue
+      file_path = strdup(p->fts_path);
+      if (file_path == NULL) {
+        err(1, "Failed to allocate memory for file path");
+      }
+      if (job_queue_push(&jq, file_path) != 0) {
+        free(file_path);
+        err(1, "Failed to push to job queue");
+        }
       break;
     default:
       break;
@@ -79,7 +146,14 @@ int main(int argc, char * const *argv) {
 
   fts_close(ftsp);
 
-  assert(0); // Shut down the job queue and the worker threads here.
+  job_queue_destroy(&jq);
+
+    for (int i = 0; i < num_threads; i++) {
+      if (pthread_join(threads[i], NULL) != 0) {
+      err(1, "pthread_join() failed");
+    }
+  }
+  free(threads);
 
   move_lines(9);
 
