@@ -1,0 +1,274 @@
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:25: 	exit 0 ;# we do not interrupt rebasing detached HEAD
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:32: 	exit 0 ;# we do not interrupt others.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:50: 	exit 1 ;# we could allow it, but there is no point.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:62: 		exit 1 ;# we could allow it, but there is no point.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:81: 					print STDERR $msg;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:84: 				print STDERR " $elem->[1]\n";
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:99:    merged into it again (either directly or indirectly).
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:101:  * Once a topic branch is fully cooked and merged into "master",
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:108:    branches, merge them into "next" branch.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-rebase.sample:119:     merged into other branches can be easily rebased without
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-commit.sample:26: # printable range starts at the space character and ends with tilde.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/pre-commit.sample:48: # If there are whitespace errors, print the offending file names and fail.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:7: # An example hook script to integrate Watchman
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:22: # print STDERR "$0 $version $last_update_token\n";
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:24: # Check the hook interface version
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:59: 	# print $fh "$clockid\n@files\n";
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:63: 	print $clockid;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:64: 	print "\0";
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:66: 	print @files;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:103: 	# print $fh $query;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:106: 	print CHLD_IN $query;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/fsmonitor-watchman.sample:112: 	# print $fh $response;
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/prepare-commit-msg.sample:16: # into the message, just before the "git status" output.  It is
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/prepare-commit-msg.sample:27: /usr/bin/perl -i.bak -ne 'print unless(m/^. Please enter the commit message/..m/^#$/)' "$COMMIT_MSG_FILE"
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/prepare-commit-msg.sample:32: #       print "\n" . `git diff --cached --name-status -r`
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/prepare-commit-msg.sample:38: # git interpret-trailers --in-place --trailer "$SOB" "$COMMIT_MSG_FILE"
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/prepare-commit-msg.sample:41: #   /usr/bin/perl -i.bak -pe 'print "\n" if !$first_line++' "$COMMIT_MSG_FILE"
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/update.sample:11: #   This boolean sets whether unannotated tags will be allowed into the
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/push-to-checkout.sample:17: # as a starting point for convenient modification.
+/Users/alberthytten/Desktop/CompSysA1/.git/hooks/push-to-checkout.sample:39: # not interfere with the difference between the branches.
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.h:8: typedef void* (*mk_index_fn)(const struct record*, int);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.h:14: int coord_query_loop(int argc, char** argv, mk_index_fn, free_index_fn, lookup_fn);
+/Users/alberthytten/Desktop/CompSysA1/src/timing.h:6: static uint64_t microseconds() {
+/Users/alberthytten/Desktop/CompSysA1/src/timing.h:9:   return ((uint64_t)t.tv_sec*1000000)+t.tv_usec;
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:1: Finding the point closest to a given point query is done by a recursive tree
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:2: walk, where we maintain a variable closest of the closest point encountered
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:6: child corresponding to the space that contains the query point, we only have
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:8: distance from closest to query intersects the cutting (hyper-)plane described
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:15:     else if node.point is closer to query than closest then
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:16:         replace closest with node.point;
+/Users/alberthytten/Desktop/CompSysA1/src/kdtree_lookup_pseudo.txt:17:     diff <- node.point[node.axis] - query[node.axis];
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:8: // pointers into the string stored in the 'line' field.  This string
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:18:   int64_t osm_id;
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:23:   int place_rank;
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:40:   // Not a real field - all the other char* elements are pointers into
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:46: // success, returns a pointer to the array of records read, and sets
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:51: struct record* read_records(const char *filename, int *n);
+/Users/alberthytten/Desktop/CompSysA1/src/record.h:55: void free_records(struct record *r, int n);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_naive.c:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_naive.c:15:   int n;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_naive.c:18: struct naive_data* mk_naive(struct record* rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_naive.c:35:   for (int i = 0; i < data->n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_naive.c:46: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:3: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:11: int id_query_loop(int argc, char** argv, mk_index_fn mk_index, free_index_fn free_index, lookup_fn lookup) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:13:     fprintf(stderr, "Usage: %s FILE\n", argv[0]);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:17:   uint64_t start, runtime;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:18:   int n;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:19:   int count = 0;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:26:     printf("Reading records: %dms\n", (int)runtime/1000);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:31:     printf("Building index: %dms\n", (int)runtime/1000);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:37:     uint64_t runtime_sum = 0;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:39:     printf("You have 3 searches\n");
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:41:       int64_t needle = atol(line);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:47:         printf("%ld: %s %f %f\n", (long)needle, r->name, r->lon, r->lat);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:49:         printf("%ld: not found\n", (long)needle);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:52:       printf("Query time: %dus\n", (int)runtime);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:56:     printf("Total query runtime: %dus\n", (int)runtime_sum);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.c:63:     fprintf(stderr, "Failed to read input from %s (errno: %s)\n",
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:371: ==118639==    at 0x49A1CB8: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:372: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:373: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:374: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:381: ==118639==    at 0x49A1CD2: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:382: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:383: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:384: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:392: ==118639==    by 0x49A1FCE: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:393: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:394: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:395: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:403: ==118639==    by 0x49A1FCE: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:404: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:405: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:406: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:413: ==118639==    at 0x49A29B0: __printf_fp_l (printf_fp.c:978)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:414: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:415: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:416: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:423: ==118639==    at 0x49A29EA: __printf_fp_l (printf_fp.c:981)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:424: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:425: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:426: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:433: ==118639==    at 0x49A2A24: __printf_fp_l (printf_fp.c:991)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:434: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:435: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:436: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:444: ==118639==    by 0x49A2A58: __printf_fp_l (printf_fp.c:998)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:445: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:446: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:447: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:454: ==118639==    at 0x49A2CD5: __printf_fp_l (printf_fp.c:1166)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:455: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:456: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:457: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:464: ==118639==    at 0x49A2F15: __printf_fp_l (printf_fp.c:1228)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:465: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:466: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:467: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:474: ==118639==    at 0x49A2EFB: __printf_fp_l (printf_fp.c:1230)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:475: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:476: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:477: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:485: ==118639==    by 0x49A3801: __printf_fp_l (printf_fp.c:1254)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:486: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:487: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:488: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:494: ==118639== Syscall param write(buf) points to uninitialised byte(s)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:502: ==118639==    by 0x49BCFC9: outstring_func (vfprintf-internal.c:239)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:503: ==118639==    by 0x49BCFC9: __vfprintf_internal (vfprintf-internal.c:1593)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:504: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:514: ==118639==    by 0x49BC14C: outstring_func (vfprintf-internal.c:239)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:515: ==118639==    by 0x49BC14C: __vfprintf_internal (vfprintf-internal.c:1263)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:516: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:532: ==118639== Syscall param write(buf) points to uninitialised byte(s)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:540: ==118639==    by 0x49BCFC9: outstring_func (vfprintf-internal.c:239)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:541: ==118639==    by 0x49BCFC9: __vfprintf_internal (vfprintf-internal.c:1593)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:542: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:552: ==118639==    by 0x49BC14C: outstring_func (vfprintf-internal.c:239)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:553: ==118639==    by 0x49BC14C: __vfprintf_internal (vfprintf-internal.c:1263)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:554: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:595: ==118639==    at 0x49A2CD5: __printf_fp_l (printf_fp.c:1166)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:596: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:597: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:598: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:608: ==118639==    by 0x49A2A58: __printf_fp_l (printf_fp.c:998)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:609: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:610: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:611: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:620: ==118639==    at 0x49A29EA: __printf_fp_l (printf_fp.c:981)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:621: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:622: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:623: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:632: ==118639==    at 0x49A29B0: __printf_fp_l (printf_fp.c:978)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:633: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:634: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:635: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:645: ==118639==    by 0x49A1FCE: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:646: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:647: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:648: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:658: ==118639==    by 0x49A1FCE: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:659: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:660: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:661: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:670: ==118639==    at 0x49A1CD2: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:671: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:672: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:673: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:682: ==118639==    at 0x49A1CB8: __printf_fp_l (printf_fp.c:396)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:683: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:684: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:685: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:736: ==118639==    at 0x49A2A24: __printf_fp_l (printf_fp.c:991)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:737: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:738: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:739: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:749: ==118639==    by 0x49A3801: __printf_fp_l (printf_fp.c:1254)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:750: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:751: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:752: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:761: ==118639==    at 0x49A2EFB: __printf_fp_l (printf_fp.c:1230)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:762: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:763: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:764: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:773: ==118639==    at 0x49A2F15: __printf_fp_l (printf_fp.c:1228)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:774: ==118639==    by 0x49BD92C: __printf_fp_spec (vfprintf-internal.c:354)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:775: ==118639==    by 0x49BD92C: __vfprintf_internal (vfprintf-internal.c:1558)
+/Users/alberthytten/Desktop/CompSysA1/src/valgrind-out.txt:776: ==118639==    by 0x49A779E: printf (printf.c:33)
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:14:   int n;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:17: struct naive_data* mk_naive(struct record* rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:30: const struct record* lookup_naive(struct naive_data *data, int64_t needle) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:31:   for(int i = 0; i < data->n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_naive.c:39: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:3: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:10: int coord_query_loop(int argc, char** argv, mk_index_fn mk_index, free_index_fn free_index, lookup_fn lookup) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:12:     fprintf(stderr, "Usage: %s FILE\n", argv[0]);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:16:   uint64_t start, runtime;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:17:   int n;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:24:     printf("Reading records: %dms\n", (int)runtime/1000);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:29:     printf("Building index: %dms\n", (int)runtime/1000);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:33:     uint64_t runtime_sum = 0;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:34:     int count = 0;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:35:     printf("You have 3 searches\n");
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:45:         printf("(%f,%f): %s (%f,%f)\n", lon, lat, r->name, r->lon, r->lat);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:47:         printf("(%f,%f): not found\n", lon, lat);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:50:       printf("Query time: %dus\n", (int)runtime);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:55:     printf("Total query runtime: %dus\n", (int)runtime_sum);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query.c:62:     fprintf(stderr, "Failed to read input from %s (errno: %s)\n",
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:13:   int64_t osm_id;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:19:     int n;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:22: struct indexed_data* mk_indexed(struct record* rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:26:     for(int i = 0; i < n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:38: const struct record* lookup_indexed(struct indexed_data *data,int64_t needle) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:39:     for(int i = 0; i < data->n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_indexed.c:47: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:19: struct Point {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:25:     struct Point point;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:26:     int axis;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:32: struct PointRecord {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:33:     struct Point point;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:37: int compare_points(const void* a, const void* b, void* axis) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:38:     int ax = *(int*)axis;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:40:         return ((struct PointRecord*)a)->point.lon - ((struct PointRecord*)b)->point.lon;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:42:         return ((struct PointRecord*)a)->point.lat - ((struct PointRecord*)b)->point.lat;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:46: struct KDNode* kdtree(struct PointRecord* point_records, int n, int depth) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:49:     int axis = depth % 2;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:50:     qsort_r(point_records, n, sizeof(struct PointRecord), compare_points, &axis);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:52:     int median = n / 2;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:55:         fprintf(stderr, "Memory allocation failed for KDNode\n");
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:59:     node->point = point_records[median].point;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:61:     node->rec = point_records[median].rec;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:63:     node->left = kdtree(point_records, median, depth + 1);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:64:     node->right = kdtree(point_records + median + 1, n - median - 1, depth + 1);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:69: struct KDNode* mk_kdtree(struct record* rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:70:     struct PointRecord* point_records = malloc(n * sizeof(struct PointRecord));
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:71:     if (point_records == NULL) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:72:         fprintf(stderr, "Memory allocation failed for point_records array\n");
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:75:     for (int i = 0; i < n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:76:         point_records[i].point.lon = rs[i].lon;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:77:         point_records[i].point.lat = rs[i].lat;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:78:         point_records[i].rec = &rs[i];
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:81:     struct KDNode* root = kdtree(point_records, n, 0);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:82:     free(point_records);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:86: double distance(struct Point a, struct Point b) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:90: void nearest_neighbor(struct KDNode* root, struct Point target, struct KDNode** best, double* best_dist) {
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:93:     double d = distance(target, root->point);
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:101:         diff = root->point.lat - target.lat;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:103:         diff = root->point.lon - target.lon;
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:119:     struct Point target = {lon, lat};
+/Users/alberthytten/Desktop/CompSysA1/src/coord_query_kdtree.c:135: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:6: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:9: int input_looks_ok(FILE *f) {
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:16:   int ret;
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:29: int read_record(struct record *r, FILE *f) {
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:141: struct record* read_records(const char *filename, int *n) {
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:153:   int capacity = 100;
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:154:   int i = 0;
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:169: void free_records(struct record *rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/record.c:170:   for (int i = 0; i < n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.h:13: // In Index", and "Free Index" are provided via function pointers.
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.h:24: // A pointer to a function that produces an index, when called with an
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.h:26: typedef void* (*mk_index_fn)(const struct record*, int);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.h:32: typedef const struct record* (*lookup_fn)(void*, int64_t);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query.h:36: int id_query_loop(int argc, char** argv, mk_index_fn, free_index_fn, lookup_fn);
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:5: #include <stdint.h>
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:13:   int64_t osm_id;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:19:     int n;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:22: int compare_index_record(const void *a, const void *b) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:23:     int64_t osm_id_a = ((struct index_record *)a)->osm_id;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:24:     int64_t osm_id_b = ((struct index_record *)b)->osm_id;
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:30: struct indexed_data* mk_sorted(struct record* rs, int n) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:34:     for(int i = 0; i < n; i++) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:47: const struct record* lookup_sorted(struct indexed_data *data,int64_t needle) {
+/Users/alberthytten/Desktop/CompSysA1/src/id_query_binsort.c:55: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/random_ids.c:6: int main(int argc, char** argv) {
+/Users/alberthytten/Desktop/CompSysA1/src/random_ids.c:8:     fprintf(stderr, "Usage: %s FILE\n", argv[1]);
+/Users/alberthytten/Desktop/CompSysA1/src/random_ids.c:12:   int n;
+/Users/alberthytten/Desktop/CompSysA1/src/random_ids.c:16:     fprintf(stderr, "Failed to read records from %s\n", argv[1]);
+/Users/alberthytten/Desktop/CompSysA1/src/random_ids.c:21:     if (printf("%ld\n", (long)rs[rand() % n].osm_id) == 0) {
